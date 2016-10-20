@@ -19,5 +19,6 @@
         <City id="spb">Saint Petersburg</City>
         <City id="kiv">Kyiv</City>
         <City id="mnsk">Minsk</City>
+        <City id="msk">Moscow</City>
     </Cities>
 </Payload>

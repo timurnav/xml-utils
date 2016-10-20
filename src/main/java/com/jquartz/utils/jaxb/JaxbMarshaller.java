@@ -9,8 +9,8 @@ import java.io.StringWriter;
 import java.io.Writer;
 
 /**
- * @author GKislin
- *         Date: 18.11.2008
+ * @author timurnav
+ *         on 29.09.2016.
  */
 public class JaxbMarshaller {
 
