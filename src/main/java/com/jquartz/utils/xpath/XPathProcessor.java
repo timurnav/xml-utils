@@ -16,7 +16,6 @@ import java.io.InputStream;
 
 /**
  * @author timurnav
- *         on 29.09.2016.
  */
 public class XPathProcessor {
     private static final DocumentBuilderFactory DOCUMENT_FACTORY = DocumentBuilderFactory.newInstance();

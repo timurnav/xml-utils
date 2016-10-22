@@ -1,19 +1,38 @@
 <Payload xmlns="http://javaops.ru"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://javaops.ru payload.xsd">
+    <Projects>
+        <Project title="Java">
+            <description>Java project description</description>
+            <Group name="Java_01" type="FINISHED"/>
+            <Group name="Java_02" type="FINISHED"/>
+            <Group name="Java_03" type="CURRENT"/>
+            <Group name="Java_04" type="REGISTERED"/>
+        </Project>
+        <Project title="Spring">
+            <description>Spring project description</description>
+            <Group name="Spring_01" type="CURRENT"/>
+            <Group name="Spring_02" type="REGISTERED"/>
+        </Project>
+        <Project title="SQL">
+            <description>SQL project description</description>
+            <Group name="SQL_01" type="FINISHED"/>
+            <Group name="SQL_02" type="FINISHED"/>
+        </Project>
+        <Project title="Advanced">
+            <description>Advanced project description</description>
+        </Project>
+    </Projects>
     <Users>
-        <User flag="active" city="kiv">
-            <email>gmail@gmail.com</email>
-            <fullName>Full Name</fullName>
-        </User>
-        <User flag="superuser" city="spb">
-            <email>admin@javaops.ru</email>
-            <fullName>Admin</fullName>
-        </User>
-        <User flag="deleted" city="spb">
-            <email>mail@yandex.ru</email>
-            <fullName>Deleted</fullName>
-        </User>
+        <User flag="active" city="kiv" email="vasya@ya.ru" fullName="Vasya"
+              groupRefs="Java_01 Java_04 Spring_02 SQL_01"/>
+        <User flag="active" city="msk" email="petya@gmail.com" fullName="Petya"
+              groupRefs="Java_03 Spring_02 SQL_02"/>
+        <User flag="active" city="msk" email="ya@ya.ru" fullName="Andrey"/>
+        <User flag="active" city="mnsk" email="mashka@ya.ru" fullName="Mashka"
+              groupRefs="Java_01 Spring_01 SQL_01"/>
+        <User flag="active" city="spb" email="ya@ya.ru" fullName="Semen"
+              groupRefs="Java_04"/>
     </Users>
     <Cities>
         <City id="spb">Saint Petersburg</City>

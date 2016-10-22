@@ -13,7 +13,6 @@ import java.io.*;
 /**
  * XML parsing Facade
  * @author timurnav
- *         on 29.09.2016.
  */
 public class JaxbParser {
 

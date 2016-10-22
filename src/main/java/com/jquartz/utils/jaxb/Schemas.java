@@ -13,7 +13,6 @@ import java.net.URL;
 
 /**
  * @author timurnav
- *         on 29.09.2016.
  */
 public class Schemas {
 

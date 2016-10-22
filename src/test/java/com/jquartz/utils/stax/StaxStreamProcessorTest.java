@@ -6,11 +6,8 @@ import org.junit.Test;
 import javax.xml.stream.XMLStreamReader;
 import javax.xml.stream.events.XMLEvent;
 
-import static org.junit.Assert.*;
-
 /**
  * @author timurnav
- *         on 21.10.2016.
  */
 public class StaxStreamProcessorTest {
 

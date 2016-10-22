@@ -8,7 +8,6 @@ import java.io.InputStream;
 
 /**
  * @author timurnav
- *         on 29.09.2016.
  */
 public class StaxStreamProcessor implements AutoCloseable {
     private static final XMLInputFactory FACTORY = XMLInputFactory.newInstance();

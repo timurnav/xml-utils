@@ -8,7 +8,6 @@ import java.nio.charset.StandardCharsets;
 
 /**
  * @author timurnav
- *         on 29.09.2016.
  */
 public class XsltProcessor {
 

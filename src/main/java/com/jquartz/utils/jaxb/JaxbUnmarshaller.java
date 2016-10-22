@@ -10,7 +10,6 @@ import java.io.StringReader;
 
 /**
  * @author timurnav
- *         on 29.09.2016.
  */
 public class JaxbUnmarshaller {
     private Unmarshaller unmarshaller;
