@@ -100,7 +100,7 @@ public abstract class AbstractMarshalUnmarshalTest {
     protected abstract String getFileName();
 
     protected InputStream openStream(String cityFile) throws IOException {
-        return Resources.getResource(JaxbParserTest.class, cityFile).openStream();
+        return Resources.getResource(AbstractMarshalUnmarshalTest.class, cityFile).openStream();
     }
 
     private String readString(String cityFile) throws IOException {
