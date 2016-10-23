@@ -23,6 +23,12 @@
             <description>Advanced project description</description>
         </Project>
     </Projects>
+    <Cities>
+        <City id="spb">Saint Petersburg</City>
+        <City id="kiv">Kyiv</City>
+        <City id="mnsk">Minsk</City>
+        <City id="msk">Moscow</City>
+    </Cities>
     <Users>
         <User flag="active" city="kiv" email="vasya@ya.ru" fullName="Vasya"
               groupRefs="Java_01 Java_04 Spring_02 SQL_01"/>
@@ -34,10 +40,4 @@
         <User flag="active" city="spb" email="ya@ya.ru" fullName="Semen"
               groupRefs="Java_04"/>
     </Users>
-    <Cities>
-        <City id="spb">Saint Petersburg</City>
-        <City id="kiv">Kyiv</City>
-        <City id="mnsk">Minsk</City>
-        <City id="msk">Moscow</City>
-    </Cities>
 </Payload>

@@ -14,17 +14,17 @@
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-                <xs:element name="Users">
-                    <xs:complexType>
-                        <xs:sequence minOccurs="0" maxOccurs="unbounded">
-                            <xs:element ref="User"/>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
                 <xs:element name="Cities">
                     <xs:complexType>
                         <xs:sequence minOccurs="1" maxOccurs="unbounded">
                             <xs:element ref="City"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Users">
+                    <xs:complexType>
+                        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                            <xs:element ref="User"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>

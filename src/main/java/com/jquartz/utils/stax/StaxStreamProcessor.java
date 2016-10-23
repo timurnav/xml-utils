@@ -18,10 +18,6 @@ public class StaxStreamProcessor implements AutoCloseable {
         reader = FACTORY.createXMLStreamReader(is);
     }
 
-    public XMLStreamReader getReader() {
-        return reader;
-    }
-
     public boolean doUntil(int stopEvent, String value) throws XMLStreamException {
         while (reader.hasNext()) {
             int event = reader.next();
@@ -32,6 +28,31 @@ public class StaxStreamProcessor implements AutoCloseable {
             }
         }
         return false;
+    }
+
+    public String doUntilAny(int stopEvent, String... values) throws XMLStreamException {
+        while (reader.hasNext()) {
+            int event = reader.next();
+            if (event == stopEvent) {
+                String xmlValue = getValue(event);
+                for (String value : values) {
+                    if (value.equals(xmlValue)) {
+                        return xmlValue;
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
+    public String getAttribute(String name) throws XMLStreamException {
+        int count = reader.getAttributeCount();
+        for (int i = 0; i < count; i++) {
+            if (reader.getAttributeLocalName(i).equals(name)) {
+                return reader.getAttributeValue(i);
+            }
+        }
+        return null;
     }
 
     public String getValue(int event) throws XMLStreamException {
@@ -47,8 +68,7 @@ public class StaxStreamProcessor implements AutoCloseable {
         if (reader != null) {
             try {
                 reader.close();
-            } catch (XMLStreamException e) {
-                // empty
+            } catch (XMLStreamException ignore) {
             }
         }
     }
