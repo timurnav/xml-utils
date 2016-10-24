@@ -1,15 +1,16 @@
 package com.jquartz.utils.stax;
 
+import com.google.common.base.Splitter;
 import com.jquartz.schema.*;
 import com.jquartz.utils.AbstractMarshalUnmarshalTest;
 
 import javax.xml.stream.XMLStreamException;
 import java.io.InputStream;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Collectors;
 
-import static java.util.Arrays.asList;
-import static java.util.Collections.emptyList;
+import static com.google.common.base.Strings.nullToEmpty;
 import static javax.xml.stream.XMLStreamConstants.START_ELEMENT;
 
 /**
@@ -73,8 +74,7 @@ public class StaxStreamProcessorTest extends AbstractMarshalUnmarshalTest {
                     .findAny()
                     .orElseThrow(() -> new IllegalArgumentException(
                             "City with id " + cityId + " is not found!")));
-            String groupRefsAttribute = Optional.ofNullable(processor.getAttribute("groupRefs")).orElse("");
-            List<String> groupRefs = Arrays.asList(groupRefsAttribute.split(" "));
+            List<String> groupRefs = Splitter.on(' ').splitToList(nullToEmpty(processor.getAttribute("groupRefs")));
             user.getGroupRefs().addAll(
                     groups.stream().filter(g -> groupRefs.contains(g.getName())).collect(Collectors.toList())
             );
