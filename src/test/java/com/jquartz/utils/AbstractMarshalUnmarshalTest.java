@@ -31,7 +31,7 @@ public abstract class AbstractMarshalUnmarshalTest {
     private static final String PAYLOAD_XML = "/payload.xml";
 
     private static final Comparator<User> USER_COMPARATOR = Comparator.comparing(User::getFullName).thenComparing(User::getEmail);
-    private static final Comparator<Project> PROJECT_COMPARATOR = Comparator.comparing(Project::getTitle);
+    private static final Comparator<Project> PROJECT_COMPARATOR = Comparator.comparing(project -> project.getTitle().toLowerCase());
 
     //@Test todo implement unmarshaling in all child classes first
     public void unmarshalObjectThanMarshalObjectAndCheck() throws Exception {
